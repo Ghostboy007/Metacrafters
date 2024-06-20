@@ -38,11 +38,4 @@ Example constructor parameters:
 - `symbol`: `"MTK"`
 - `initialSupply`: `1000000` (representing 1,000,000 tokens)
 
-### Usage
 
-#### Minting Tokens
-
-To mint new tokens, call the `mint` function. Specify the recipient address and the number of tokens to mint.
-
-```solidity
-mint(address _to, uint256 _amount)
