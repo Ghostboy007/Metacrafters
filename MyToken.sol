@@ -6,7 +6,6 @@ contract MyToken {
     string public name;
     string public symbol;
     uint256 public totalSupply;
-
     mapping(address => uint256) public balances;
 
     constructor(string memory _name, string memory _symbol, uint256 _initialSupply) {
@@ -26,7 +25,6 @@ contract MyToken {
     function burn(address _from, uint256 _amount) public {
         require(_from != address(0), "Burn from the zero address");
         require(balances[_from] >= _amount, "Insufficient balance to burn");
-
         totalSupply -= _amount;
         balances[_from] -= _amount;
         emit Transfer(_from, address(0), _amount);
