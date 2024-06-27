@@ -12,7 +12,7 @@ This project demonstrates the use of `require()`, `assert()`, and `revert()` fun
 
 ### Executing the program
 
-1. Open https://gitpod.io/#https://github.com/CEDoromal/ETH-AVAX-Module-1-Project and create a Gitpod workspace
+1. Open [https://gitpod.io/#https://github.com/CEDoromal/ETH-AVAX-Module-1-Project] and create a Gitpod workspace
 2. Wait for npm to install Truffle (if the installation did not start automatically, enter `npm install -g truffle` on the terminal)
 3. Start the Truffle console by entering `truffle develop` on the terminal
 4. Enter `compile` and then `migrate` on the terminal
