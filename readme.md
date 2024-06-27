@@ -1,45 +1,44 @@
-# MyToken Solidity Smart Contract
+# ETH + AVAX Module 1 Project
 
-## Overview
+Metacrafters ETH + AVAX Module 1 Project
 
-Welcome to the MyToken Solidity smart contract! This contract implements a basic ERC-20-like token on the Ethereum blockchain. It includes functionalities for minting new tokens, burning existing tokens, and managing token balances.
+## Description
 
-This document will guide you through the key aspects of the MyToken smart contract, explaining its purpose and providing instructions on how to interact with it.
+This project serves the purpose of fulfilling a requirement for ETH + AVAX PROOF: Intermediate EVM Course of Metacrafters
 
-## Features
-
-- **Token Details**: The contract stores the name, symbol, and total supply of the token.
-- **Balance Management**: Users can query the balance of any address.
-- **Minting**: Increase the token supply by minting new tokens to a specified address.
-- **Burning**: Decrease the token supply by burning tokens from a specified address.
-- **Transfer Event**: Emits a transfer event whenever tokens are minted or burned.
+This project demonstrates the use of `require()`, `assert()`, and `revert()` functions in a smart contract
 
 ## Getting Started
 
-### Prerequisites
+### Executing the program
 
-To interact with this contract, you will need:
+1. Open https://gitpod.io/#https://github.com/CEDoromal/ETH-AVAX-Module-1-Project and create a Gitpod workspace
+2. Wait for npm to install Truffle (if the installation did not start automatically, enter `npm install -g truffle` on the terminal)
+3. Start the Truffle console by entering `truffle develop` on the terminal
+4. Enter `compile` and then `migrate` on the terminal
+5. Enter `let instance = await FunctionsAndErrors.deployed()` so that you may interact with the smart contract using the object `instance`
+6. Play around with the contract using `instance.<functionName>(<argument>)` (For example: `instance.requireEvenNumber(2)`)
 
-- [Solidity](https://docs.soliditylang.org/) version 0.8.18 or compatible.
-- A development environment like [Remix](https://remix.ethereum.org/) or [Truffle](https://www.trufflesuite.com/truffle).
-- An Ethereum client or test network for deployment (e.g., [Ganache](https://www.trufflesuite.com/ganache)).
+Note: 
 
-### Deployment
+To check the value of `evenCount`, enter `(await instance.evenCount()).toString()`
 
-To deploy the MyToken contract:
+You may also make a simple async function (`let getEvenCount = async() => (await instance.evenCount()).toString()`) so that you just need to call that function (`getEvenCount()`) to get the value of `evenCount`
 
-1. Open your development environment (e.g., Remix).
-2. Copy the MyToken contract code into a new file named `MyToken.sol`.
-3. Compile the contract using the Solidity compiler version 0.8.18.
-4. Deploy the contract, specifying the initial token name, symbol, and supply in the constructor.
+### Callable Variables and Functions
 
-Example constructor parameters:
-- *name*: "MyToken"
-- *symbol*: "MTK"
-- *initialSupply*: 1000
+`uint public evenCount`
 
-## Usage
+`function requireEvenNumber(uint number) external`
 
-After deploying the contract, interact with it as follows:
+`function assertEvenNumber(uint number) external`
 
-- **Mint Tokens**: Incr
+`function revertEvenNumber(uint number) external`
+
+## Author
+
+CEDoromal (cesdoromal@mymail.mapua.edu.ph)
+
+## License
+
+This project is licensed under the MIT License - see the LICENSE file for details
