@@ -12,7 +12,7 @@ This project demonstrates the use of `require()`, `assert()`, and `revert()` fun
 
 ### Executing the program
 
-1. Open [https://gitpod.io/#https://github.com/CEDoromal/ETH-AVAX-Module-1-Project] and create a Gitpod workspace
+1. Open [https://gitpod.io/(https://jeffryanpol-soliditysta-bmmtpapmg0g.ws-us114.gitpod.io/)]and create a Gitpod workspace
 2. Wait for npm to install Truffle (if the installation did not start automatically, enter `npm install -g truffle` on the terminal)
 3. Start the Truffle console by entering `truffle develop` on the terminal
 4. Enter `compile` and then `migrate` on the terminal
@@ -35,10 +35,6 @@ You may also make a simple async function (`let getEvenCount = async() => (await
 
 `function revertEvenNumber(uint number) external`
 
-## Author
 
-CEDoromal (cesdoromal@mymail.mapua.edu.ph)
 
-## License
 
-This project is licensed under the MIT License - see the LICENSE file for details
