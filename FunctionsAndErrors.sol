@@ -36,4 +36,17 @@ contract CustomToken {
 
     function burnTokens(address account, uint256 amount) public onlyCreator {
         if (balances[account] < amount) {
-            revert BalanceTooLow({available: balances[account],
+            revert BalanceTooLow({available: balances[account], requested: amount});
+        }
+        balances[account] -= amount;
+        supply -= amount;
+        emit TokensBurned(account, amount);
+    }
+
+    function transferTokens(address recipient, uint256 amount) public {
+        require(balances[msg.sender] >= amount, "Insufficient balance for transfer");
+        balances[msg.sender] -= amount;
+        balances[recipient] += amount;
+        emit TokensTransferred(msg.sender, recipient, amount);
+    }
+}
